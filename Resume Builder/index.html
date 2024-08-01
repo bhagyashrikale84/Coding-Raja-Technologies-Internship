@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--here goes html code-->
+<div class="container" id="cv-form">
+    <h1 class="text-center my-2">Resume Generator</h1>
+<p class="text-center"></p>
+<div class="row">
+    <div class="col-md-6">
+        <!--first col-->
+        <h3>Personal Information</h3>
+        <div class="form-group">
+            <label for="namefield">Your Name</label>
+            <input type="text" id="namefield" placeholder="enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="contactfield">Your Contact</label>
+            <input type="text" id="contactfield" placeholder="enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="addressfield">Your Address</label>
+            <textarea id="addressfield" placeholder="enter here" class="form-control"rows="2"></textarea>
+        </div>
+
+<div class="form-group mt-3">
+    <label for="">Select Your Photo</label>
+    <input id="imgfield" type="file" class="form-control" />
+</div>
+
+        <p class="text-secondary my-3">Important Links</p>
+        <div class="form-group mt-2">
+            <label for="fbfield">Facebook</label>
+            <input type="text" id="fbfield" placeholder="enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="instafield">Instagram</label>
+            <input type="text" id="instafield" placeholder="enter here" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="linkedfield">LinkedIn</label>
+            <input type="text" id="linkedfield" placeholder="enter here" class="form-control">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <!--second col-->
+        <h3>Professional Information</h3>
+        <div class="form-group mt-2">
+            <label for="">Objective</label>
+            <textarea id="objectivefield"  placeholder="enter here" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group mt-2" id="we">
+            <label for="">Work Experience</label>
+            <textarea placeholder="enter here" class="form-control wefield"></textarea>
+        <!--new textarea-->
+        <div class="container text-center mt-3" id="weaddbutton">
+           <button onclick="addnewwefield()" class="btn btn-primary btn-sm">Add</button>
+        </div>
+        </div>
+
+        <div class="form-group mt-2" id="aq">
+            <label for="">Acadamic Qualification</label>
+            <textarea placeholder="enter here" class="form-control aqfield"></textarea>
+        <!--new textarea-->
+        <div class="container text-center mt-2" id="aqaddbutton">
+           <button onclick="addnewaqfield()" class="btn btn-primary btn-sm">Add</button>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="container text-center mt-3">
+    <button onclick="generatecv()" class="btn btn-primary btn-lg">Generate CV</button>
+</div>
+</div>
+
+<!--cv template-->
+<div class="container" id="cv-template">
+<div class="row">
+    <div class="col-md-4 text-center py-5 background">
+<!--first col-->
+<img src="https://amaxfireandsecurity.co.uk/wp-content/uploads/2023/12/profile-pic-MD.jpg" alt="" class="img-fluid myimg" id="imgtemplate">
+<div class="container">
+    <p id="nameT1">anita  Tiwari</p>
+    <p id="contactT">+11 01234567, +23 4567890321</p>
+    <p id="addressT">123/456 sector 101 noida, India.</p>
+    <hr/>
+    <p>
+        <a id="fbT" href="#1">www.Facebook.com</a>
+    </p>
+    <p>
+        <a id="instaT" href="#1">www.Instagram.com</a>
+    </p>
+    <p>
+        <a id="linkedT" href="#1">www.linkedIn.com</a>
+    </p>
+
+</div>
+    </div>
+    <div class="col-md-8 py-5">
+<!--second col-->
+<h1 id="nameT2" class="text-center" style="font-weight: 980;">
+    anita Tiwari
+</h1>
+<!--objective card-->
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Objective</h3>
+    </div>
+    <div class="card-body">
+        <p id="objectiveT">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium enim voluptate numquam, 
+            illum provident mollitia quae accusantium adipisci exercitationem voluptatem at aliquid temporibus 
+            optio aspernatur autem velit. 
+            
+             </p>
+    </div>
+</div>
+
+<!--work experience-->
+
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Work Experience</h3>
+    </div>
+    <div class="card-body">
+       <ul id="weT">
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        
+       </ul>
+    </div>
+</div>
+<!--acadamic qualification-->
+<div class="card mt-4">
+    <div class="card-header background">
+        <h3>Academic Qualification</h3>
+    </div>
+    <div class="card-body">
+       <ul id="aqT">
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, asperiores.</li>
+        
+       </ul>
+    </div>
+</div>
+ 
+<div class="container text-center mt-3">
+    <button onclick="printcv()" class="btn background">Print CV</button>
+</div>
+
+    </div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
